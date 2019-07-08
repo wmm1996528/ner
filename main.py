@@ -34,7 +34,7 @@ def ner_tf_master():
     parser.add_argument('--mode', type=str, default='demo', help='train/test/demo')
     parser.add_argument('--demo_model', type=str, default='1559700797', help='model for test and demo')#测试和演示的模型
     args = parser.parse_args()
-
+    args.mode = 'train'
 
     ## get char embeddings
     word2id = read_dictionary(os.path.join('.', args.train_data, 'word2id1.pkl'))
